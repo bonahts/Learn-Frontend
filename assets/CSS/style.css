@@ -1,0 +1,192 @@
+/* base styles */
+body {
+    color: rgb #333333;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+hr {
+    display: none;
+}
+/* reusables */ 
+.constrain {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.button {
+    background-color: #ca720e;   
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-color 0.5s;
+    display: inline-block;
+
+}
+.button-orange {
+    background-color: #ca720e;   
+    color: white;
+}
+.button-orange:hover {
+    background-color: #f3c086;
+}
+.button-white {
+    background-color: white;
+    color: #ca720e;
+}
+.button-white:hover {
+    background-color: #eee;   
+
+}
+
+/* header */
+.header{
+    background-color: #c0b9b2;
+    /* background-color: #b87777; */
+    /* padding: 10px 20px 30px 40px;
+    10 px=top, 20px=right, 30px=bottom, 40px=left */
+}
+.header .constrain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* untuk mendefenisikan item agar diletakkan sepanjang garis lurus pada sumbu utama */
+}
+.header h1 {
+    padding: 0;
+    margin: 0;
+}
+.header h1 span {
+    display: none;
+}
+.header h1 img {
+    width: 30px;
+}
+.header a {  
+    /* margin-right: 20px; */
+    color: white; 
+    text-decoration: none; /* untuk memberikan efek garis pada text */ 
+    font-size: 15px;
+    transition: color 0.5s;
+    /* border: 1px solid white;
+    padding: 10px; */
+}
+.header a:hover { 
+    color: black; /* unutk mengatur link yang ditunjuk oleh kursor */
+}
+.header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.header nav ul a{
+    margin-left: 50px;
+}
+
+/* product */
+.product {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex  ;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 30px 0;
+}
+.product:first-child {
+    padding-top: 20px;
+}
+.product:last-child {
+    border-bottom: none;
+}
+.product-reverse {
+    flex-direction: row-reverse;
+}
+.product-text, .product-image {
+    flex: 50% 0 0;
+}
+.product-text h1, .content h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+.product-text h2 {
+    font-size: 21px;
+}
+.product-text p, .content p{
+    font-size: 21px;
+    line-height: 1.4 ;
+}
+.product-nav {
+    margin-top: 30px;
+}
+.product-nav ul {
+    list-style: none; /* berfungsi untuk menghilangkan simbol list */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.product-nav ul a {
+    margin-right: 20px;
+
+}
+.product-image img{
+    width: 75%;
+
+}
+/* footer */
+.footer {
+    border-top: 1px solid #ccc;
+    padding: 10px 0 ;
+}
+
+/* cookies banner */
+.cookies-banner{
+    background-color: #c0b9b2;
+    color: black;
+    padding: 10px 0;
+    /* position: fixed; */
+    /* position: absolute; */
+    position: static;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 0.5s;
+    /* text-align: center; */
+}
+.cookies-banner.show{
+    transform: translateY(0%);
+}
+.cookies-banner .constrain {
+    display: flex;
+    justify-content: space-between;
+}
+.cookies-banner h1{
+    margin-top: 0;
+    /* margin-bottom: 0; */
+    /* padding: 0; */
+}
+.cookies-banner p{
+    /* margin-top: 0; */
+    margin-bottom: 0;
+}
+
+/* media queries */
+@media (max-width: 767px) {
+    .product{
+        display: block;
+        padding: 10px 0;
+    }
+    .product:first-child{
+        padding-top: 0;
+    }
+    .product h1, .content h1{
+        font-size: 34px;
+    }
+    .product h2, .content h2 {
+        font-size: 16px;
+    }
+    .product p, .content p{
+        font-size: 16px;
+    }
+
+
+}
